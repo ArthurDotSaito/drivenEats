@@ -1,5 +1,7 @@
 :root{
     --header_background:#CF2B2B;
+    --main_background:#E5E5E5;
+    --chart_container_color:#FFFFFF;
 }
 
 body{
@@ -16,7 +18,7 @@ body{
     background:var(--header_background);
 }
 
-header h4, h1{
+header h4, h1, .sectionTitle{
     font-family: 'Righteous';
     font-weight: 400;
     font-size: 44px;
@@ -31,4 +33,76 @@ header h1{
     line-height: 21.09px;
 }
 
+main{
+    background:var(--main_background);
+}
 
+.sectionTitle{
+    font-size: 26px;
+    line-height: 32.28px;
+    letter-spacing: 1.8%;
+    color: #333333;
+    padding-top: 31px;
+    padding-bottom: 17px;
+}
+
+.prato{
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-x: auto;
+}
+
+.prato .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 172px;
+    min-width: 172px;
+    height: 216px;
+    background-color: var(--chart_container_color);
+    border-radius: 9px;
+    margin-left: 16px;
+}
+
+.imgPosition{
+    display: flex;
+    justify-content: center;
+    width: 172px;
+}
+
+.container img{
+    width: 144px;
+    height: 87px;
+    left: 14px;
+    right: 14px;
+}
+
+.container h4{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    padding: 8px 0px 4px 15px;
+}
+
+.container h2{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A6A6A6;
+    margin: 0px 11px 0px 14px;
+}
+
+.container h3{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    padding: 8px 0px 0px 15px;
+}
