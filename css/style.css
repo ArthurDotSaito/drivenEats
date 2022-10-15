@@ -64,8 +64,8 @@ main{
     overflow-x: scroll;
 }
 
-.prato .container_00, .container_01,
-.container_02, .container_03{
+.prato .containerOne_00, .containerOne_01,
+.containerOne_02, .containerOne_03{
     display: flex;
     flex-direction: column;
     justify-content: center;
