@@ -19,47 +19,53 @@
             <h4>DrivenEats</h4>
             <h1>Sua comida em 6 minutos</h1>
         </header>
-
+ 
         <main class="mainContent">
             <h4 class="sectionTitle">Primeiro, seu prato</h4>
 
-            <section class="prato">
-                <div class="container">
+            <section class="prato" data-test="dishes">
+
+                <div class="container_00" data-test="food-option" onclick="selectOption(this)" >
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
-                    <h4>Frango Yin Yang</h4>
+                    <h4 class="frangoYinYang">Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
-                    <h3>R$ 14,90</h3>
+                    <h3>R$ 14,90<img src="bib/checkmark-circle 2.svg" class="check"></h3>
                 </div>
-                <div class="container">
+
+                <div class="container_01" data-test="food-option" onclick="selectOption(this)">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
-                    <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                    <h3>R$ 14,90<img src="bib/checkmark-circle 2.svg" class="check"></h3>
+                </div>    
+
+                <div class="container_02" data-test="food-option" onclick="selectOption(this)">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
-                    <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                    <h3>R$ 14,90<img src="bib/checkmark-circle 2.svg" class="check"></h3>
+                </div>  
+
+                <div class="container_03" data-test="food-option" onclick="selectOption(this)"> 
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
-                    <h3>R$ 14,90</h3>
+                    <h3>R$ 14,90<img src="bib/checkmark-circle 2.svg" class="check"></h3>
                 </div>
             </section>
 
             <h4 class="sectionTitle">Agora, sua Bebida</h4>
 
-            <section class="prato">
-                <div class="container">
+            <section class="prato" data-test="drinks">
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
@@ -67,21 +73,23 @@
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="container">
+                <div class="container" data-test="drinks">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                </div>           
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                </div>           
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
@@ -93,8 +101,8 @@
 
             <h4 class="sectionTitle">Por fim, sua sobremesa</h4>
 
-            <section class="prato">
-                <div class="container">
+            <section class="prato data-test="desserts"">
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
@@ -102,21 +110,23 @@
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
                 </div>
-                <div class="container">
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                </div>           
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
                     <h4>Frango Yin Yang</h4>
                     <h2>Um pouco de batata, um pouco de salada</h2>
                     <h3>R$ 14,90</h3>
-                </div>           <div class="container">
+                </div>           
+                <div class="container" data-test="food-option">
                     <div class="imgPosition">
                         <img src="bib/frango_yin_yang 1.jpg">
                     </div>
@@ -132,6 +142,8 @@
                 <h4>Selecione os 3 itens para fechar o pedido</h4>
             </section>
         </footer>
+
+        <script src="script.js"></script>
         
     </body>
     
