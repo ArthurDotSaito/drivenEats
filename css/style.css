@@ -114,6 +114,16 @@ main{
     margin: 0px 11px 0px 14px;
 }
 
+.cardBottomOne,.cardBottomTwo, .cardBottomThree {
+    display: flex;
+    width: 145px;
+    height: 19px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 8px 0px 0px 15px;
+}
+
 .prato h3, .bebidas h3, .sobremesa h3{
     width: 145px;
     height: 19px;
@@ -123,7 +133,6 @@ main{
     font-size: 16px;
     line-height: 19px;
     color: #333333;
-    padding: 8px 0px 0px 15px;
 }
 
 .check{

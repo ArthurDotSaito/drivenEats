@@ -1,22 +1,23 @@
-let validationOne;
-let validationTwo;
-let validationThree;
-
+let validationOne, validationTwo, validationThree;
+let priceDish, nameDish;
+let priceDrink, nameDrink;
+let priceDessert, nameDessert;
+let orderValue;
 
 function selectDishes(selector){
     const selectedBefore = document.querySelector('.prato>.selected');
     if(selectedBefore !== null){selectedBefore.classList.remove('selected');}
     selector.classList.toggle('selected');
 
-    const checkedBefore = document.querySelector('.priceOne> .unhidden');
+    const checkedBefore = document.querySelector('.cardBottomOne>.unhidden');
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
     
+    nameDish = selector.querySelector('.dishName').innerHTML;
+    let aux = selector.querySelector('.priceOne').innerHTML;
+    priceDish = Number(aux.replace(/[^0-9.-]+/g,""));
     validationOne = selector.innerHTML;
-    console.log(validationOne);
-    console.log(validationTwo);
-    console.log(validationThree);
     enableCloseOrder();
 }
 
@@ -25,15 +26,15 @@ function selectDrinks(selector){
     if(selectedBefore !== null){selectedBefore.classList.remove('selected');}
     selector.classList.toggle('selected');
 
-    const checkedBefore = document.querySelector('.priceTwo> .unhidden');
+    const checkedBefore = document.querySelector('.cardBottomTwo>.unhidden');
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
     
+    nameDrink = selector.querySelector('.dishName').innerHTML;
+    let aux = selector.querySelector('.priceTwo').innerHTML;
+    priceDrink = Number(aux.replace(/[^0-9.-]+/g,""));
     validationTwo = selector.innerHTML;
-    console.log(validationOne);
-    console.log(validationTwo);
-    console.log(validationThree);
     enableCloseOrder();
 }
 
@@ -42,15 +43,15 @@ function selectDessert(selector){
     if(selectedBefore !== null){selectedBefore.classList.remove('selected');}
     selector.classList.toggle('selected');
 
-    const checkedBefore = document.querySelector('.priceThree> .unhidden');
+    const checkedBefore = document.querySelector('.cardBottomThree>.unhidden');
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
 
+    nameDessert = selector.querySelector('.dishName').innerHTML;
+    let aux = selector.querySelector('.priceThree').innerHTML;
+    priceDessert = Number(aux.replace(/[^0-9.-]+/g,""));
     validationThree = selector.innerHTML;
-    console.log(validationOne);
-    console.log(validationTwo);
-    console.log(validationThree);
     enableCloseOrder();
 }
 
@@ -59,10 +60,17 @@ function enableCloseOrder(){
         if(validationTwo !== undefined){
             if(validationThree !== undefined){
                 const button = document.querySelector('.footer>.closeOrderButton');
+                document.querySelector('.footer>.closeOrderButton').disabled =  false;
                 button.classList.add('buttonOn');
                 button.innerHTML = 'Fechar Pedido';
             }
         }
     }
+}
+
+function orderPrice(){
+    orderValue = (priceDish/100) + (priceDrink/100) + (priceDessert/100);
+    console.log(orderValue)
+    return orderValue
 }
 
