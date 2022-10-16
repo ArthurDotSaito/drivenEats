@@ -70,7 +70,16 @@ function enableCloseOrder(){
 
 function orderPrice(){
     orderValue = (priceDish/100) + (priceDrink/100) + (priceDessert/100);
-    console.log(orderValue)
-    return orderValue
+    console.log(orderValue);
+    return orderValue;
 }
 
+function closeOrder(){
+    orderPrice();
+    let cellphoneNumber = "5543999601411";
+    let message = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + nameDish + '\n- Bebida: '+  nameDrink  +'\n- Sobremesa: ' + nameDessert +'\nTotal: R$'+orderValue;
+
+    message = window.encodeURIComponent(message);
+
+    window.open("https://api.whatsapp.com/send?phone=" + cellphoneNumber + "&text=" + message, "_blank");
+}
