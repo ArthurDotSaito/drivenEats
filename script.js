@@ -1,3 +1,8 @@
+let validationOne;
+let validationTwo;
+let validationThree;
+
+
 function selectDishes(selector){
     const selectedBefore = document.querySelector('.prato>.selected');
     if(selectedBefore !== null){selectedBefore.classList.remove('selected');}
@@ -7,6 +12,12 @@ function selectDishes(selector){
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
+    
+    validationOne = selector.innerHTML;
+    console.log(validationOne);
+    console.log(validationTwo);
+    console.log(validationThree);
+    enableCloseOrder();
 }
 
 function selectDrinks(selector){
@@ -18,6 +29,12 @@ function selectDrinks(selector){
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
+    
+    validationTwo = selector.innerHTML;
+    console.log(validationOne);
+    console.log(validationTwo);
+    console.log(validationThree);
+    enableCloseOrder();
 }
 
 function selectDessert(selector){
@@ -29,4 +46,23 @@ function selectDessert(selector){
     if(checkedBefore !== null){checkedBefore.classList.remove('unhidden');}
     const checked = selector.querySelector('.check');
     checked.classList.add('unhidden');
+
+    validationThree = selector.innerHTML;
+    console.log(validationOne);
+    console.log(validationTwo);
+    console.log(validationThree);
+    enableCloseOrder();
 }
+
+function enableCloseOrder(){
+    if(validationOne !== undefined){
+        if(validationTwo !== undefined){
+            if(validationThree !== undefined){
+                const button = document.querySelector('.footer>.closeOrderButton');
+                button.classList.add('buttonOn');
+                button.innerHTML = 'Fechar Pedido';
+            }
+        }
+    }
+}
+
