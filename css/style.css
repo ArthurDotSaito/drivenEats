@@ -3,6 +3,7 @@
     --main_background:#E5E5E5;
     --chart_container_color:#FFFFFF;
     --order_not_closed:#cbcbcb;
+    --order_closed:#32B72F;
 }
 
 body{
@@ -56,7 +57,7 @@ main{
     padding-bottom: 17px;
 }
 
-.prato{
+.prato, .bebidas, .sobremesa{
     display: flex;
     width: 100%;
     height: auto;
@@ -64,8 +65,13 @@ main{
     overflow-x: scroll;
 }
 
-.prato .containerOne_00, .containerOne_01,
-.containerOne_02, .containerOne_03{
+.containerOne_00, .containerOne_01,
+.containerOne_02, .containerOne_03,
+.containerTwo_00, .containerTwo_01,
+.containerTwo_02,
+.containerTwo_03, .containerThree_00,
+.containerThree_01,.containerThree_02,
+.containerThree_03{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +98,7 @@ main{
     right: 14px;
 }
 
-.prato h4{
+.prato h4, .bebidas h4, .sobremesa h4{
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -100,7 +106,7 @@ main{
     padding: 8px 0px 4px 15px;
 }
 
-.prato h2{
+.prato h2, .bebidas h2, .sobremesa h2{
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
@@ -108,7 +114,7 @@ main{
     margin: 0px 11px 0px 14px;
 }
 
-.prato h3{
+.prato h3, .bebidas h3, .sobremesa h3{
     width: 145px;
     height: 19px;
     display: flex;
@@ -146,23 +152,22 @@ footer{
     z-index: 1;
 }
 
-footer section{
+footer button{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 364px;
     height: 61px;
-    background-color: var(--order_not_closed);
-    border-radius: 50px;
-}
-
-footer h4{
-    width: 196px;
-    height: 50px;
     font-weight: 400;
     font-size: 20px;
     line-height:23.44px;
     letter-spacing:1.8%;
     padding-left: 15px;
     color: #FFFFFF;
+    background-color: var(--order_not_closed);
+    border-radius: 50px;
+}
+
+.buttonOn{
+    background-color: var(--order_closed);
 }
