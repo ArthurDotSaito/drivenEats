@@ -65,13 +65,17 @@ main{
     overflow-x: scroll;
 }
 
+.prato div:last-child, .bebidas div:last-child,
+.sobremesa div:last-child{
+    margin-right: 16px;
+}
+
 .containerOne_00, .containerOne_01,
 .containerOne_02, .containerOne_03,
 .containerTwo_00, .containerTwo_01,
-.containerTwo_02,
-.containerTwo_03, .containerThree_00,
-.containerThree_01,.containerThree_02,
-.containerThree_03{
+.containerTwo_02, .containerTwo_03, 
+.containerThree_00, .containerThree_01,
+.containerThree_02, .containerThree_03{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,16 +166,14 @@ footer{
 }
 
 footer button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     width: 364px;
     height: 61px;
     font-weight: 400;
     font-size: 20px;
-    line-height:23.44px;
-    letter-spacing:1.8%;
-    padding-left: 15px;
+    line-height:23px;
+    letter-spacing:0.018em;
+    text-align: center;
     color: #FFFFFF;
     background-color: var(--order_not_closed);
     border-radius: 50px;
@@ -179,4 +181,5 @@ footer button{
 
 .buttonOn{
     background-color: var(--order_closed);
+    font-weight: 700;
 }
