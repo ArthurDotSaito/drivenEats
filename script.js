@@ -69,7 +69,8 @@ function enableCloseOrder(){
 }
 
 function orderPrice(){
-    orderValue = (priceDish/100) + (priceDrink/100) + (priceDessert/100);
+    let aux = (priceDish/100) + (priceDrink/100) + (priceDessert/100);
+    orderValue = aux.toString().replace(".",",");
     console.log(orderValue);
     return orderValue;
 }
@@ -77,7 +78,7 @@ function orderPrice(){
 function closeOrder(){
     orderPrice();
     let cellphoneNumber = "5543999601411";
-    let message = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + nameDish + '\n- Bebida: '+  nameDrink  +'\n- Sobremesa: ' + nameDessert +'\nTotal: R$'+orderValue;
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${nameDish}\n- Bebida: ${nameDrink}\n- Sobremesa: ${nameDessert}\nTotal: R$ ${orderValue}`;
 
     message = window.encodeURIComponent(message);
 
